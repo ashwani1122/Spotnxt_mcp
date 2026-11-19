@@ -134,6 +134,11 @@ You should see the four tool schemas followed by the results for `list_campaigns
 
 ## Connect to Claude Desktop
 
+> **No paid subscription needed.** Anthropic supports local MCP servers in
+> **Claude Desktop on the Free plan**. A free Claude account is enough for this
+> assignment. Claude Code (the `claude` CLI) requires a paid plan, so use the
+> Desktop app instead — no Pro/Max purchase is required.
+
 ### 1. Find the Claude Desktop config file
 
 | OS | Path |
@@ -180,6 +185,11 @@ macOS / Linux example:
 
 If the file already contains other MCP servers, add the `"spotnxt-ads"` entry inside the existing `"mcpServers"` object.
 
+> **Windows MSIX installs:** some Claude Desktop builds read a virtualized copy
+> of the config. If the server does not appear, add the same `"spotnxt-ads"`
+> entry here as well:
+> `%LOCALAPPDATA%\Packages\Claude_pzs8sxrjxfjjc\LocalCache\Roaming\Claude\claude_desktop_config.json`
+
 ### 3. Restart Claude Desktop
 
 Quit Claude Desktop completely (on Windows, use **File → Exit**; closing the window is not enough) and reopen it.
@@ -216,7 +226,10 @@ Claude should first discover the tools, then invoke `list_campaigns`, `read_ad_d
 
 ---
 
-## Connect to Claude Code (alternative)
+## Optional: Claude Code (paid plans only)
+
+> **Skip this section if you are using the free plan.** Claude Code requires a
+> paid Claude subscription or API billing. Claude Desktop Free is sufficient.
 
 Claude Code can load a project-scoped `.mcp.json` from the repository root:
 
@@ -341,7 +354,7 @@ The output below was produced by `python scripts/demo_client.py` using the offic
 }
 ```
 
-### Claude Desktop demonstration
+### Claude Desktop demonstration (free plan works)
 
 After following [Connect to Claude Desktop](#connect-to-claude-desktop), ask:
 
