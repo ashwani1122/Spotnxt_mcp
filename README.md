@@ -469,4 +469,5 @@ spotnxt-mcp-server/
 - `uvicorn>=0.31,<1.0` — ASGI server.
 - `pytest`, `httpx` — development/test only.
 #   S p o t n x t _ B a c k e n d _ D e v e l o p e r _ I n t e r n _ A s s i g n m e n t  
+ #   S p o t n x t _ m c p  
  
